@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		584EF2FE260767D500546D3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584EF2FD260767D500546D3D /* AppDelegate.swift */; };
 		584EF300260767D500546D3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584EF2FF260767D500546D3D /* SceneDelegate.swift */; };
-		584EF302260767D500546D3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584EF301260767D500546D3D /* ViewController.swift */; };
+		584EF302260767D500546D3D /* BarChartsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584EF301260767D500546D3D /* BarChartsVC.swift */; };
 		584EF305260767D500546D3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 584EF303260767D500546D3D /* Main.storyboard */; };
 		584EF307260767D700546D3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 584EF306260767D700546D3D /* Assets.xcassets */; };
 		584EF30A260767D700546D3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 584EF308260767D700546D3D /* LaunchScreen.storyboard */; };
@@ -17,13 +17,15 @@
 		584EF31B2607690400546D3D /* CALayer+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584EF31A2607690400546D3D /* CALayer+Ext.swift */; };
 		584EF31E2607691C00546D3D /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584EF31D2607691C00546D3D /* Animations.swift */; };
 		584EF3212607699C00546D3D /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584EF3202607699C00546D3D /* UIColor+Ext.swift */; };
+		58EDF0CE279C4E44001F4EED /* RoundedChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EDF0CD279C4E44001F4EED /* RoundedChartVC.swift */; };
+		58EDF0D5279F38FE001F4EED /* RoundedChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EDF0D4279F38FE001F4EED /* RoundedChart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		584EF2FA260767D500546D3D /* Charts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Charts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		584EF2FD260767D500546D3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		584EF2FF260767D500546D3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		584EF301260767D500546D3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		584EF301260767D500546D3D /* BarChartsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartsVC.swift; sourceTree = "<group>"; };
 		584EF304260767D500546D3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		584EF306260767D700546D3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		584EF309260767D700546D3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -32,6 +34,8 @@
 		584EF31A2607690400546D3D /* CALayer+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Ext.swift"; sourceTree = "<group>"; };
 		584EF31D2607691C00546D3D /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		584EF3202607699C00546D3D /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		58EDF0CD279C4E44001F4EED /* RoundedChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedChartVC.swift; sourceTree = "<group>"; };
+		58EDF0D4279F38FE001F4EED /* RoundedChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedChart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,12 +69,9 @@
 			isa = PBXGroup;
 			children = (
 				584EF3132607685600546D3D /* System */,
-				584EF301260767D500546D3D /* ViewController.swift */,
-				584EF317260768B700546D3D /* BarChart.swift */,
-				584EF3202607699C00546D3D /* UIColor+Ext.swift */,
-				584EF31A2607690400546D3D /* CALayer+Ext.swift */,
-				584EF31D2607691C00546D3D /* Animations.swift */,
-				584EF303260767D500546D3D /* Main.storyboard */,
+				58EDF0D2279F38A3001F4EED /* UI */,
+				58EDF0CF279F387F001F4EED /* Extensions */,
+				58EDF0D3279F38B0001F4EED /* Storyboard */,
 				584EF3152607686300546D3D /* Resources */,
 			);
 			path = Charts;
@@ -93,6 +94,51 @@
 				584EF30B260767D700546D3D /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		58EDF0CF279F387F001F4EED /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				584EF3202607699C00546D3D /* UIColor+Ext.swift */,
+				584EF31A2607690400546D3D /* CALayer+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		58EDF0D0279F388B001F4EED /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				584EF301260767D500546D3D /* BarChartsVC.swift */,
+				58EDF0CD279C4E44001F4EED /* RoundedChartVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		58EDF0D1279F3898001F4EED /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				584EF31D2607691C00546D3D /* Animations.swift */,
+				584EF317260768B700546D3D /* BarChart.swift */,
+				58EDF0D4279F38FE001F4EED /* RoundedChart.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		58EDF0D2279F38A3001F4EED /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				58EDF0D0279F388B001F4EED /* Controllers */,
+				58EDF0D1279F3898001F4EED /* Charts */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		58EDF0D3279F38B0001F4EED /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				584EF303260767D500546D3D /* Main.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,7 +213,9 @@
 			files = (
 				584EF3212607699C00546D3D /* UIColor+Ext.swift in Sources */,
 				584EF318260768B700546D3D /* BarChart.swift in Sources */,
-				584EF302260767D500546D3D /* ViewController.swift in Sources */,
+				58EDF0D5279F38FE001F4EED /* RoundedChart.swift in Sources */,
+				584EF302260767D500546D3D /* BarChartsVC.swift in Sources */,
+				58EDF0CE279C4E44001F4EED /* RoundedChartVC.swift in Sources */,
 				584EF31E2607691C00546D3D /* Animations.swift in Sources */,
 				584EF2FE260767D500546D3D /* AppDelegate.swift in Sources */,
 				584EF300260767D500546D3D /* SceneDelegate.swift in Sources */,
@@ -319,14 +367,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G34RLASP48;
+				DEVELOPMENT_TEAM = U338449W69;
 				INFOPLIST_FILE = Charts/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = test.charts.Charts;
+				PRODUCT_BUNDLE_IDENTIFIER = custom.charts.Charts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -339,14 +387,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G34RLASP48;
+				DEVELOPMENT_TEAM = U338449W69;
 				INFOPLIST_FILE = Charts/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = test.charts.Charts;
+				PRODUCT_BUNDLE_IDENTIFIER = custom.charts.Charts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

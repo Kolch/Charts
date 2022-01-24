@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class BarChartsVC: UIViewController {
     
     @IBOutlet weak var barChart: BarChart!
     @IBOutlet weak var segmentCtrl: UISegmentedControl!

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="58g-Hq-5Uw">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Bars-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="BarChartsVC" customModule="Charts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xFQ-p9-V1t">
+                                <rect key="frame" x="5" y="349" width="404" height="32"/>
+                                <segments>
+                                    <segment title="Day"/>
+                                    <segment title="Week"/>
+                                    <segment title="Month"/>
+                                    <segment title="Year"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentAction:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="t4O-SP-3qF"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3dQ-mv-BcU" customClass="BarChart" customModule="Charts" customModuleProvider="target">
+                                <rect key="frame" x="10" y="194" width="394" height="150"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="aXE-Kh-g4q"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xFQ-p9-V1t" firstAttribute="top" secondItem="3dQ-mv-BcU" secondAttribute="bottom" constant="5" id="8lr-oQ-rEL"/>
+                            <constraint firstItem="xFQ-p9-V1t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="R3Y-WQ-dWZ"/>
+                            <constraint firstItem="3dQ-mv-BcU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="UHK-de-j23"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xFQ-p9-V1t" secondAttribute="trailing" constant="5" id="f6a-H4-rMk"/>
+                            <constraint firstItem="3dQ-mv-BcU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="fyc-2X-Fc8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3dQ-mv-BcU" secondAttribute="trailing" constant="10" id="i5a-Rj-4eg"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Bars" image="chart.bar.fill" catalog="system" id="VzU-x2-2fT"/>
+                    <connections>
+                        <outlet property="barChart" destination="3dQ-mv-BcU" id="iF8-yj-x85"/>
+                        <outlet property="segmentCtrl" destination="xFQ-p9-V1t" id="MTo-hy-Gs1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-219" y="-164"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Fne-RU-SoI">
+            <objects>
+                <tabBarController id="58g-Hq-5Uw" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Gbt-K9-ChU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="AccentColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="eWS-BG-swE"/>
+                        <segue destination="JU4-vs-3y1" kind="relationship" relationship="viewControllers" id="KCx-6y-CTH"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kVl-39-rqQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1110" y="231"/>
+        </scene>
+        <!--Circle-->
+        <scene sceneID="em3-yV-xVe">
+            <objects>
+                <viewController id="JU4-vs-3y1" customClass="RoundedChartVC" customModule="Charts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UOo-5B-zA1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ddr-6d-M29" customClass="RoundedChart" customModule="Charts" customModuleProvider="target">
+                                <rect key="frame" x="82" y="303.5" width="250" height="250"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="eKs-u3-dWP"/>
+                                    <constraint firstAttribute="height" constant="250" id="nxW-gz-hKm"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ep1-Op-eB3">
+                                <rect key="frame" x="176.5" y="623.5" width="61" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Reset"/>
+                                <connections>
+                                    <action selector="reset:" destination="JU4-vs-3y1" eventType="touchUpInside" id="9tj-Kl-OUq"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4n8-fk-Msg">
+                                <rect key="frame" x="15" y="669.5" width="384" height="32"/>
+                                <segments>
+                                    <segment title="2"/>
+                                    <segment title="3"/>
+                                    <segment title="4"/>
+                                    <segment title="5"/>
+                                    <segment title="6"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentAction:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Oxy-dA-730"/>
+                                    <action selector="segmentAction:" destination="JU4-vs-3y1" eventType="primaryActionTriggered" id="S82-qO-nSK"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fkx-Gw-6CE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ep1-Op-eB3" firstAttribute="centerX" secondItem="ddr-6d-M29" secondAttribute="centerX" id="7Cl-zI-hfL"/>
+                            <constraint firstItem="fkx-Gw-6CE" firstAttribute="trailing" secondItem="4n8-fk-Msg" secondAttribute="trailing" constant="15" id="7NS-ze-LIW"/>
+                            <constraint firstItem="ddr-6d-M29" firstAttribute="centerY" secondItem="fkx-Gw-6CE" secondAttribute="centerY" id="El0-5s-Wqe"/>
+                            <constraint firstItem="ep1-Op-eB3" firstAttribute="top" secondItem="ddr-6d-M29" secondAttribute="bottom" constant="70" id="Ewc-lY-8Tb"/>
+                            <constraint firstItem="ddr-6d-M29" firstAttribute="centerX" secondItem="fkx-Gw-6CE" secondAttribute="centerX" id="N0p-Hb-RPZ"/>
+                            <constraint firstItem="4n8-fk-Msg" firstAttribute="leading" secondItem="fkx-Gw-6CE" secondAttribute="leading" constant="15" id="OV7-id-gqD"/>
+                            <constraint firstItem="4n8-fk-Msg" firstAttribute="top" secondItem="ep1-Op-eB3" secondAttribute="bottom" constant="15" id="bZG-og-TMQ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Circle" image="chart.pie.fill" catalog="system" id="dXM-jt-PHE"/>
+                    <connections>
+                        <outlet property="roundedChart" destination="ddr-6d-M29" id="Hip-93-xVe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uXG-5c-GjJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-220" y="548"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chart.bar.fill" catalog="system" width="128" height="92"/>
+        <image name="chart.pie.fill" catalog="system" width="128" height="121"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

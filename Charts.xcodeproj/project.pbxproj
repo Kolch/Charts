@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5832436627E9B893002AFB65 /* InlineChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5832436527E9B893002AFB65 /* InlineChartVC.swift */; };
 		584EF2FE260767D500546D3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584EF2FD260767D500546D3D /* AppDelegate.swift */; };
 		584EF300260767D500546D3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584EF2FF260767D500546D3D /* SceneDelegate.swift */; };
 		584EF302260767D500546D3D /* BarChartsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584EF301260767D500546D3D /* BarChartsVC.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5832436527E9B893002AFB65 /* InlineChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineChartVC.swift; sourceTree = "<group>"; };
 		584EF2FA260767D500546D3D /* Charts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Charts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		584EF2FD260767D500546D3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		584EF2FF260767D500546D3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			children = (
 				584EF301260767D500546D3D /* BarChartsVC.swift */,
 				58EDF0CD279C4E44001F4EED /* RoundedChartVC.swift */,
+				5832436527E9B893002AFB65 /* InlineChartVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				584EF318260768B700546D3D /* BarChart.swift in Sources */,
 				58EDF0D5279F38FE001F4EED /* RoundedChart.swift in Sources */,
 				584EF302260767D500546D3D /* BarChartsVC.swift in Sources */,
+				5832436627E9B893002AFB65 /* InlineChartVC.swift in Sources */,
 				58EDF0CE279C4E44001F4EED /* RoundedChartVC.swift in Sources */,
 				584EF31E2607691C00546D3D /* Animations.swift in Sources */,
 				584EF2FE260767D500546D3D /* AppDelegate.swift in Sources */,

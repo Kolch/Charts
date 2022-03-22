@@ -72,6 +72,7 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="eWS-BG-swE"/>
                         <segue destination="JU4-vs-3y1" kind="relationship" relationship="viewControllers" id="KCx-6y-CTH"/>
+                        <segue destination="2J2-i9-XGQ" kind="relationship" relationship="viewControllers" id="62g-r1-31f"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kVl-39-rqQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -138,8 +139,53 @@
             </objects>
             <point key="canvasLocation" x="-220" y="548"/>
         </scene>
+        <!--Inline-->
+        <scene sceneID="Joh-QL-VHv">
+            <objects>
+                <viewController id="2J2-i9-XGQ" customClass="InlineChartVC" customModule="Charts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tzx-GY-l5R">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wzR-78-ab4">
+                                <rect key="frame" x="40" y="408.5" width="334" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="YDT-AB-h2u"/>
+                                </constraints>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZaZ-Z2-dDq">
+                                <rect key="frame" x="38" y="498.5" width="338" height="31"/>
+                                <connections>
+                                    <action selector="sliderAction:" destination="2J2-i9-XGQ" eventType="valueChanged" id="DLO-xd-YkK"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="K9J-j6-6b1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wzR-78-ab4" firstAttribute="leading" secondItem="K9J-j6-6b1" secondAttribute="leading" constant="40" id="7jz-YX-bjk"/>
+                            <constraint firstItem="ZaZ-Z2-dDq" firstAttribute="top" secondItem="wzR-78-ab4" secondAttribute="bottom" constant="50" id="Au1-y7-iEs"/>
+                            <constraint firstItem="wzR-78-ab4" firstAttribute="centerX" secondItem="K9J-j6-6b1" secondAttribute="centerX" id="Fk3-R4-Rgw"/>
+                            <constraint firstItem="K9J-j6-6b1" firstAttribute="trailing" secondItem="wzR-78-ab4" secondAttribute="trailing" constant="40" id="Hnx-cZ-7Bu"/>
+                            <constraint firstItem="wzR-78-ab4" firstAttribute="centerY" secondItem="K9J-j6-6b1" secondAttribute="centerY" id="M3I-5l-a0F"/>
+                            <constraint firstItem="ZaZ-Z2-dDq" firstAttribute="trailing" secondItem="wzR-78-ab4" secondAttribute="trailing" id="RTM-83-h6V"/>
+                            <constraint firstItem="ZaZ-Z2-dDq" firstAttribute="leading" secondItem="wzR-78-ab4" secondAttribute="leading" id="sgj-DS-ToB"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Inline" image="chart.bar.doc.horizontal.fill" catalog="system" id="aZo-Zh-CmF"/>
+                    <connections>
+                        <outlet property="chartView" destination="wzR-78-ab4" id="Uie-2l-b32"/>
+                        <outlet property="slider" destination="ZaZ-Z2-dDq" id="Hjq-b0-3dM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cUW-2D-L20" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-220" y="1270"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="chart.bar.doc.horizontal.fill" catalog="system" width="115" height="128"/>
         <image name="chart.bar.fill" catalog="system" width="128" height="92"/>
         <image name="chart.pie.fill" catalog="system" width="128" height="121"/>
         <namedColor name="AccentColor">
